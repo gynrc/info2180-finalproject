@@ -5,6 +5,8 @@ body {
     display: grid;
     grid-template-columns: 20% 80%;
 }
+
+/* banner CSS */
 header {
     background-color: #12111f;
     display: flex;
@@ -12,20 +14,23 @@ header {
     grid-column: span 2;
 }
 
+img {
+    height: 40px;
+    width: 60px;
+    margin-left: 30px;
+}
+
 header h3 {
     color: white;
 }
 
+/* contacts(note) page CSS */
 .contact-img {
     float: left;
     height: 70px;
     width: 70px;
     margin: 0;
     margin-right: 10px;
-}
-
-.section h4 {
-    height: 19px;
 }
 
 .info {
@@ -86,7 +91,7 @@ header h3 {
     padding: 10px;
 }
 
-#save {
+#add-note {
     border-radius: 4px;
     background-color: #0443cc;
     width: 70px;
@@ -95,12 +100,7 @@ header h3 {
     color: white;
 }
 
-img {
-    height: 40px;
-    width: 60px;
-    margin-left: 30px;
-}
-
+/* menu CSS */
 ul{
     list-style: none;
 }
@@ -119,65 +119,19 @@ a:hover {
     margin-top: 20px;
 }
 
-.dashb {
+hr {
+    width: 90%;
+    margin-left: 0;
+}
+
+/* home page CSS */
+.dash-heading {
     height: 30px;
     width: 150px;
     display: inline-block;
     margin-bottom: 0;
     margin-right: 850px;
     margin-top: 0;
-}
-
-hr {
-    width: 90%;
-    margin-left: 0;
-}
-
-main {
-    background-color: lightgrey;
-    padding-left: 40px;
-}
-
-.dashbtn {
-    display: inline-flex;
-    align-items: center;
-    height: 50px;
-    margin-top: 20px;
-}
-
-.users {
-    grid-column: 2;
-    border: 1px solid black;
-    height: 500px;
-    width: 95%;
-    background-color: bisque;
-}
-
-.access {
-    display: grid;
-    margin: auto;
-    width: 50%;
-    padding: 10%;
-    text-align: center;
-    justify-content: center;
-}
-
-input {
-    display: block;
-    margin-bottom: 10px;
-    width: 400px;
-    border: 1px solid grey;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 99%;
-    height: 60px;
-}
-
-footer p {
-    text-align: center;
 }
 
 #add-contact {
@@ -192,6 +146,39 @@ footer p {
     color: white;
 }
 
+main {
+    background-color: lightgrey;
+    padding-left: 40px;
+}
+
+.dash-div {
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+}
+
+/* div to display results on dashboard */
+.users { 
+    grid-column: 2;
+    border: 1px solid black;
+    height: 500px;
+    width: 95%;
+    background-color: bisque;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    height: 60px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* login page CSS */
 #login {
     background-color: #0443cc;
     color: white;
@@ -204,6 +191,22 @@ footer p {
 input, button {
     border-radius: 4px;
     padding: 7px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    width: 400px;
+    border: 1px solid grey;
+}
+
+.access {
+    display: grid;
+    margin: auto;
+    width: 50%;
+    padding: 10%;
+    text-align: center;
+    justify-content: center;
 }
 
 
