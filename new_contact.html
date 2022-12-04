@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+	<script src="schema.js" type="text/javascript"></script>
+    <title>New Contact</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="dolphin.png" alt="picture of dolphin"/>
+            <h3>Dolphin CRM</h1>
+        </header>
+        <div class="menu">
+            <ul> 
+                <li><a href="home.html">Home</a></li>
+                <li><a href="new_contact.html">New Contact</a></li>
+                <li><a href="users.html">Users</a></li>
+                <hr>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+        </div>
+        <main>        
+            <h2>New Contact</h2>
+            <div class="users">
+                <form>
+                    <label for="title">Title</label>
+                    <select name="title" id="title">
+                    <option value="mr">Mr</option>
+                    <option value="mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                    <option value="none">None</option>
+                    </select> 
+                    <label for="fname">First Name</label>
+                    <input id="fname" type="text" name="fname" placeholder="Jane" />
+                    <label for="lname">Last Name</label>
+                    <input id="lname" type="text" name="lname" placeholder="Doe" />
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="something@example.com" />
+                    <label for="tel">Telephone</label>
+                    <input id="tel" type="tel" name="tel" placeholder="123-456-7890" />
+                    <label for="company">Company</label>
+                    <input id="company" type="text" name="company"/>
+                    <label for="type">Type</label>
+                    <select name="type" id="type">
+                        <option value="sl">Sales Lead</option>
+                        <option value="sup">Support</option>
+                    </select> 
+                    <label for="assigned">Assigned To</label>
+                    <select name="assigned" id="assigned">
+                        <option value="ab">Andy Bernard</option>
+                        <option value="cd">Can Doe</option>
+                    </select> 
+                    <button id="save">Save</button>
+                </form>
+            </div>
+        </main>
+        </div>
+    </div>
+</body>
+</html>
