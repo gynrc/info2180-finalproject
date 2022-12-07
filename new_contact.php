@@ -22,8 +22,8 @@ $company = htmlspecialchars($_GET['company']);
 $type = htmlspecialchars($_GET['type']);
 $assigned = htmlspecialchars($_GET['assigned']);
 
-$sql = "INSERT INTO users(title, firstname, lastname, email, telephone, company, type, assigned_to) VALUES
-        ('$title', '$fname', '$lname', '$email', '$tel', '$company', '$type' '$assigned')";
+$sql = "INSERT INTO contacts(title, firstname, lastname, email, telephone, company, type, assigned_to) VALUES
+        ('$title', '$fname', '$lname', '$email', '$tel', '$company', '$type', '$assigned')";
 
 if ($conn->query($sql) === TRUE) {
 	echo "ADDED: ".$title.", ".$fname.", ".$lname.", ".$email.", ".$tel.", ".$company.", ".$type.", ".$assigned;
