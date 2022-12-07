@@ -16,45 +16,67 @@
         </header>
         <div class="menu">
             <ul> 
-                <li><a href="home.html">Home</a></li>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="new_contact.html">New Contact</a></li>
-                <li><a href="users.html">Users</a></li>
+                <li><a href="users.php">Users</a></li>
                 <hr>
-                <li><a href="logout">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
         <main>        
             <h2>New Contact</h2>
-            <div class="users">
-                <form>
+            <div class="new-contact">
+                <form action="new_contact.php" action="get">
+                    <div id="contact-info">
                     <label for="title">Title</label>
                     <select name="title" id="title">
-                    <option value="mr">Mr</option>
-                    <option value="mrs">Mrs</option>
-                    <option value="Ms">Ms</option>
-                    <option value="none">None</option>
+                        <option value="mr">Mr</option>
+                        <option value="mrs">Mrs</option>
+                        <option value="ms">Ms</option>
+                        <option value="none">None</option>
                     </select> 
-                    <label for="fname">First Name</label>
-                    <input id="fname" type="text" name="fname" placeholder="Jane" />
-                    <label for="lname">Last Name</label>
-                    <input id="lname" type="text" name="lname" placeholder="Doe" />
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="something@example.com" />
-                    <label for="tel">Telephone</label>
-                    <input id="tel" type="tel" name="tel" placeholder="123-456-7890" />
-                    <label for="company">Company</label>
-                    <input id="company" type="text" name="company"/>
+                    </div>
+
+                    <div id="contact-info">
+                        <label for="fname">First Name</label>
+                        <input id="fname" type="text" name="fname" placeholder="Jane"/>
+                    </div>
+
+                    <div id="contact-info">
+                        <label for="lname">Last Name</label>
+                        <input id="lname" type="text" name="lname" placeholder="Doe"/>
+                    </div>
+                    
+                    <div id="contact-info">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="something@example.com"/>
+                    </div>
+                    
+                    <div id="contact-info">
+                        <label for="tel">Telephone</label>
+                        <input id="tel" type="tel" name="tel" placeholder="123-456-7890" />
+                    </div>
+                    
+                    <div id="contact-info">
+                        <label for="company">Company</label>
+                        <input id="company" type="text" name="company"/>
+                    </div>
+                    
+                    <div id="contact-info">
                     <label for="type">Type</label>
                     <select name="type" id="type">
                         <option value="sl">Sales Lead</option>
                         <option value="sup">Support</option>
                     </select> 
+                    </div>
+                
+                    <div id="contact-info">
                     <label for="assigned">Assigned To</label>
                     <select name="assigned" id="assigned">
-                        <option value="ab">Andy Bernard</option>
-                        <option value="cd">Can Doe</option>
+                        <option value="name">Andy Bernard</option>
                     </select> 
-                    <button id="save">Save</button>
+                    </div>
+                    <button id="save" type="submit">Save</button>
                 </form>
             </div>
         </main>

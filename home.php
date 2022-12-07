@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+$host = "localhost";
+$username = "root";
+$password = "";
+$dbname = "schema";
+
+$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+$stmt = $conn->query("SELECT * FROM contacts");
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,28 +48,31 @@
         <button id="fltrSupport">Support</button>
         <button id="fltrAssigned">Assigned to me</button>
     </div>
-    <div class="home-list"> 
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Company</th>
-                    <th>Type</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ms. Jan Levinson</td>
-                    <td>jan.levinson@paper.com</td>
-                    <td>The Paper Company</td>
-                    <td>Sales Lead</td>
-                    <td><a href="contacts.html">View</a></td>
-                </tr>              
-            </tbody>
-        </table>
-    </div>
+    <div class="home-list">
+        <?php
+            echo "<table>";
+            echo "<thead>";
+                echo "<tr>";
+                echo "<th>Name</th>";
+                echo "<th>Email</th>";
+                echo "<th>Company</th>";
+                echo "<th>Type</th>";
+                echo "<th></th>";
+                echo "</tr>";
+            echo "</thead>";
+            echo"<tbody>";
+            foreach ($results as $row) {
+                echo "<tr>";
+                echo "<td> {$row['firstname']}" . " " . "{$row['lastname']} </td>";
+                echo "<td> {$row['email']} </td>";
+                echo "<td> {$row['company']} </td>";
+                echo "<td> {$row['type']} </td>";
+                echo "<td><a href='contacts.html'>View</a></td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+            echo "</table>"; ?>
+    </div> 
     </main>
     </div>
 </body>

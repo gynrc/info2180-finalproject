@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+$host = "localhost";
+$username = "root";
+$password = "";
+$dbname = "schema";
+
+$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+$stmt = $conn->query("SELECT * FROM contacts");
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +33,7 @@
                 <li><a href="new_contact.html">New Contact</a></li>
                 <li><a href="users.php">Users</a></li>
                 <hr>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="logout">Logout</a></li>
             </ul>
         </div>
         <main>
@@ -37,23 +50,23 @@
             <div class="section" id="display-info">
                 <div class="column">
                     <label for="email">Email</label>
-                    <p> something </p>
-                    <input type="email" id="email" name="email" placeholder=""/> 
+                    <p>michael.scott@paper.co</p>
+                    <!--<input type="email" id="email" name="email" placeholder="michael.scott@paper.com"/>--> 
                 </div>
                 <div class="column">
                     <label for="tel">Telephone</label>
-                    <p> something </p>
-                    <input type="tel" id="tel" name="tel" placeholder=""/> 
+                    <p>876-999-9999</p>
+                    <!--<input type="tel" id="tel" name="tel" placeholder=""/>-->
                 </div>
                 <div class="column">
                     <label for="company">Company</label>
-                    <p> something </p>
-                    <input type="text" id="company" name="company" placeholder=""/> 
+                    <p>The Paper Company</p>
+                    <!--<input type="text" id="company" name="company" placeholder=""/>-->
                 </div>
                 <div class="column">
                     <label for="assigned">Assigned To</label>
-                    <p> something </p>
-                    <input type="text" id="assigned" name="assigned" placeholder=""/> 
+                    <p>Jen Levinson</p>
+                    <!--<input type="text" id="assigned" name="assigned" placeholder=""/>-->
                 </div>
             </div>
             <div class="section" id="note-section">

@@ -9,10 +9,47 @@
     <title>Users</title>
 </head>
 <body>
-    <header>
-        <img src="dolphin.png" alt="picture of dolphin"/>
-        <h3>Dolphin CRM</h1>
-    </header>
+    <div class="container">
+        <header>
+            <img src="dolphin.png" alt="picture of dolphin"/>
+            <h3>Dolphin CRM</h1>
+        </header>
+        <div class="menu">
+            <ul> 
+                <li><a href="home.php">Home</a></li>
+                <li><a href="new_contact.html">New Contact</a></li>
+                <li><a href="users.php">Users</a></li>
+                <hr>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
+        <main>      
+            <div class="heading-btn"> 
+                <h2>Users</h2>
+                <a href="new_user.html"><button id="add-user">Add User</button></a>
+            </div>  
+            <div class="users-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Created</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ms. Jan Levinson</td>
+                            <td>jan.levinson@paper.com</td>
+                            <td>Member</td>
+                            <td>2022-11-13 11:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
     
 </body>
 </html>
